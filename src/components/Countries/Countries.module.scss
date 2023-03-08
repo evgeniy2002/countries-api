@@ -1,0 +1,127 @@
+@import "../../scss/variables";
+
+.carts {
+  margin: 50px 0 0 0;
+  &_row {
+    display: flex;
+    margin: 0 -35px;
+    flex-wrap: wrap;
+    @media (max-width: 846px) {
+      margin: 0 -25px;
+    }
+
+    @media (max-width: 540px) {
+      margin: 0 -15px;
+    }
+    @media (max-width: 515px) {
+      margin: 0;
+    }
+    &__columns {
+      padding: 0 35px;
+      flex: 0 1 25%;
+      margin: 0 0 70px 0;
+      @media (max-width: 1137px) {
+        flex: 0 1 33.333%;
+      }
+      @media (max-width: 846px) {
+        flex: 0 1 50%;
+        padding: 0 25px;
+      }
+      @media (max-width: 540px) {
+        padding: 0 15px;
+      }
+      @media (max-width: 515px) {
+        flex: 1 1 100%;
+        padding: 0;
+
+        margin: 0 0 50px 0;
+      }
+    }
+    &__item {
+      height: 100%;
+
+      cursor: pointer;
+    }
+    &__img {
+      position: relative;
+      padding: 80px 0;
+      // flex: 0 0 200px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.07);
+      -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.07);
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.07);
+      @media (max-width: 826px) {
+        padding: 95px 0;
+      }
+      @media (max-width: 426px) {
+        padding: 110px 0;
+      }
+      @media (max-width: 375px) {
+        padding: 95px 0;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
+    }
+    &__body {
+      padding: 25px 25px 50px 25px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.1);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.1);
+      box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.1);
+
+      h3 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        word-break: break-word;
+      }
+    }
+    &__info {
+      margin: 15px 0 0 0;
+    }
+    &__desc {
+      display: flex;
+      font-size: 14px;
+
+      &:not(:last-of-type) {
+        margin: 0 0 5px 0;
+      }
+      p {
+        color: $textColor;
+        font-weight: 600;
+      }
+      span {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        word-break: break-word;
+        font-weight: 300;
+        padding: 0 0 0 5px;
+        color: $veryDarkBlue;
+      }
+    }
+  }
+}
+.dark {
+  .carts_row {
+    &__body {
+      background-color: $darkBlue;
+      color: $white;
+    }
+    &__desc {
+      p,
+      span {
+        color: $white;
+      }
+    }
+  }
+}
