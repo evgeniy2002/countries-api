@@ -52,7 +52,7 @@ export const Countries: React.FC<ThemeProps> = ({ theme }) => {
     <section className={theme === 'light' ? s.carts : s.carts + ' ' + s.dark}>
       <div className="container">
         <div className={s.carts_row}>
-          {isFetching ? (
+          {isLoading || isFetching ? (
             <div className="loader">
               <img src={loader} alt="" />
             </div>

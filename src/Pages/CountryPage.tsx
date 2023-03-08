@@ -73,7 +73,7 @@ const CountryPage: React.FC<ThemeProps> = ({ theme }) => {
           <span>Back</span>
         </button>
         <div className="page-row">
-          {isFetching ? (
+          {isLoading || isFetching ? (
             <div className="loader">
               <img src={loader} alt="" />
             </div>
